@@ -7,6 +7,9 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Dev\\Response\\' => array($baseDir . '/class'),
+    'Dev\\Quick\\' => array($baseDir . '/controller'),
+    'Dev\\Payload\\' => array($baseDir . '/controller'),
+    'Dev\\Message\\' => array($baseDir . '/controller'),
     'Dev\\Main\\' => array($baseDir . '/'),
     'Dev\\Auth\\' => array($baseDir . '/class'),
 );

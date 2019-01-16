@@ -10,6 +10,9 @@ class ComposerStaticInitcd1aeb4815f82100872358734183f67d
         'D' => 
         array (
             'Dev\\Response\\' => 13,
+            'Dev\\Quick\\' => 10,
+            'Dev\\Payload\\' => 12,
+            'Dev\\Message\\' => 12,
             'Dev\\Main\\' => 9,
             'Dev\\Auth\\' => 9,
         ),
@@ -19,6 +22,18 @@ class ComposerStaticInitcd1aeb4815f82100872358734183f67d
         'Dev\\Response\\' => 
         array (
             0 => __DIR__ . '/../..' . '/class',
+        ),
+        'Dev\\Quick\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/controller',
+        ),
+        'Dev\\Payload\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/controller',
+        ),
+        'Dev\\Message\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/controller',
         ),
         'Dev\\Main\\' => 
         array (

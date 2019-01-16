@@ -1,7 +1,7 @@
 <?php
 	namespace Dev\Main;
 	use Dev\Auth\Auth as auth;
-	use Dev\Response\Response as response;
+
 
 	Class Main
 	{
@@ -33,17 +33,41 @@
 			$entry_object = $this ->verify_entry();
 
 			$curl_url = curl_init($this->access_token);
+			$entry_object->curl_url = $this->access_token;
 	        $sender_id = $entry_object ->sender_id;
 	        $message = $entry_object->Message;
-	    
-		       $response = new response();
-		       if($message == "imyanmar")
-		       {
-		         $msg = "i know imyanmar";
-		         $response-> FB_NORMAL_TEXT_MSG($curl_url, $sender_id, $msg);
-			 exit();
-		}
+	        $function_name= strtolower($entry_object->Func_name);
+	     
+	   		switch($entry_object->Msg_type)
+	   		{
+	   			case "Message":
+	   			$ctl = new \Dev\Message\Message($entry_object);
+	   			if($this->auth_class->method_call($ctl, $entry_object))
+	   			{
+	   					$ctl->$function_name($entry_object->Message);
+	   					exit();
+	   			}
+	   			break;
+	   			case "Payload":
+	   			$ctl = new \Dev\Payload\Payload($entry_object);
+	   			$method_call =  $this->auth_class->method_call($ctl, $entry_object);
 
+	   			if($this->auth_class->method_call($ctl, $entry_object))
+	   			{
+	   					$ctl->$function_name();
+	   					exit();
+	   			}
+	   			break;
+	   			case "Quickpayload":
+	   			$ctl = new \Dev\Quick\Quick($entry_object);
+	   			$method_call =  $this->auth_class->method_call($ctl, $entry_object);
+	   			if($this->auth_class->method_call($ctl, $entry_object))
+	   			{
+	   					$ctl->$function_name();
+	   					exit();
+	   			}
+	   			break;
+	   		}
 		}
 
 

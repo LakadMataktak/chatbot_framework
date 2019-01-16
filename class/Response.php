@@ -52,7 +52,6 @@ Class Response
 	}
 	function FB_GENERIC_TEMP_MSG($curl_url, $sender_id, $generics_arr)
 	{
-
 		foreach($generics_arr as $key => $generic_arr)
 		{
 			$title = 		$generic_arr["title"];

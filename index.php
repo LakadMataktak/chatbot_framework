@@ -1,5 +1,5 @@
 <?php
-	
+		error_reporting(E_ERROR);
 		require_once("vendor/autoload.php");
 		use Dev\Main\Main as Main;
 		$hub_token = trim($_GET["hub_verify_token"]);
