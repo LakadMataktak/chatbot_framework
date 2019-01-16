@@ -34,7 +34,7 @@
 
 			$curl_url = curl_init($this->access_token);
 	        $sender_id = $entry_object ->sender_id;
-	        $message = $entry_object->message;
+	        $message = $entry_object->Message;
 	    
 		       $response = new response();
 		       if($message == "imyanmar")
