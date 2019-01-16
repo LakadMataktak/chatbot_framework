@@ -19,11 +19,11 @@ class Quick
 		        $msg = "I reach to quick!";
 		        $this->response-> FB_NORMAL_TEXT_MSG($curl_url, $sender_id, $msg);
 
-		       //  $quick_reply_title = "Back to MainMenu!";
-		       // $quick_replies_arr[0]["title"] = "Main Menu";
-		       // $quick_replies_arr[0]["payload"] = "payload_mainmenu";
-		       // $quick_replies_arr[0]["image_url"] = "";
-		       //  $this->response-> FB_QUICK_REPLIES_TEMP($curl_url, $sender_id, $quick_reply_title, $quick_replies_arr);
+		        $quick_reply_title = "Back to MainMenu!";
+		       $quick_replies_arr[0]["title"] = "Main Menu";
+		       $quick_replies_arr[0]["payload"] = "payload_mainmenu";
+		       $quick_replies_arr[0]["image_url"] = "";
+		        $this->response-> FB_QUICK_REPLIES_TEMP($curl_url, $sender_id, $quick_reply_title, $quick_replies_arr);
 
 	}
 
