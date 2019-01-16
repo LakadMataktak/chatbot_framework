@@ -1,0 +1,22 @@
+{
+    "name": "imh/chatbot",
+    "description": "chatbot created by htoo min shein",
+    "type": "composer-plugin",
+    "authors": [
+        {
+            "name": "SubaruHasami",
+            "email": "hmsbutterfly16@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload":
+    {
+        "psr-4":{
+             "Dev\\Auth\\": "class/",
+            "Dev\\Response\\": "class/",
+            "Dev\\Main\\": ""
+           
+        }
+    }
+}
