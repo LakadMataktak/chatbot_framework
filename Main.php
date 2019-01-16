@@ -35,26 +35,14 @@
 			$curl_url = curl_init($this->access_token);
 	        $sender_id = $entry_object ->sender_id;
 	        $message = $entry_object->message;
-	        if($entry_object->Message)
-	        {
-
-	        	= Dev\Message\Message("Message")
-	        } else if($entry_object->Payload)
-	        {
-
-	        }else if($entry_object->Quickpayload)
-	        {
-
-	        }else{
-	        	exit();
-	        }
-		//        $response = new response();
-		//        if($message == "imyanmar")
-		//        {
-		 //         $msg = "i know imyanmar";
-		 //         $response-> FB_NORMAL_TEXT_MSG($curl_url, $sender_id, $msg);
-		// 	 exit();
-		// }
+	    
+		       $response = new response();
+		       if($message == "imyanmar")
+		       {
+		         $msg = "i know imyanmar";
+		         $response-> FB_NORMAL_TEXT_MSG($curl_url, $sender_id, $msg);
+			 exit();
+		}
 
 		}
 
